@@ -13,8 +13,12 @@ echo "start setup..."
 for f in .??*; do
 	[ "$f" = ".git" ] && continue
 	[ "$f" = ".gitmodules" ] && continue
+	[ "$f" = ".DS_Store" ] && continue
 
 	ln -snfv ~/dotfiles/"$f" ~/
 done
+
+mkdir -p ~/.config/nvim
+ln -snfv ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 
 echo "finish setup"
