@@ -134,5 +134,3 @@ set undofile
 set undodir=~/.vim/undodir
 nnoremap <C-i> :UndotreeToggle<cr>
 
-" python path
-let g:python_host_prog = '/usr/local/bin/python2'
