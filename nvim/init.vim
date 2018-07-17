@@ -5,16 +5,16 @@ filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
 
+" Utils
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " tree dir
+Plug 'rking/ag.vim' " silver search
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'tomtom/tcomment_vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/AnsiEsc.vim'
-Plug 'Valloric/YouCompleteMe'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -23,7 +23,6 @@ Plug 'flazz/vim-colorschemes'
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'Chiel92/vim-autoformat'
-Plug 'tpope/vim-fugitive'
 Plug 'rhysd/nyaovim-markdown-preview'
 Plug 'rhysd/nyaovim-popup-tooltip'
 Plug 'slim-template/vim-slim'
@@ -31,6 +30,17 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'danro/rename.vim'
 Plug 'othree/xml.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'mattn/emmet-vim'
+Plug 'easymotion/vim-easymotion'
+
+" git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive' " git wrapper
+
+" rails
+Plug 'tpope/vim-rails'
+
+" JS typescript
 Plug 'leafgarland/typescript-vim'
 
 Plug 'mbbill/undotree' " undotree
@@ -123,7 +133,4 @@ let vim_markdown_preview_hotkey='<C-m>'
 set undofile
 set undodir=~/.vim/undodir
 nnoremap <C-i> :UndotreeToggle<cr>
-
-
-
 
