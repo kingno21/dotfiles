@@ -436,6 +436,7 @@ endfunction
 " custom config
 set number
 
-
-
+" custom key map
+nmap <Space>l $
+nmap <Space>h ^
 
