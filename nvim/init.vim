@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
 " Utils
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " tree dir
 Plug 'rking/ag.vim' " silver search
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" On-demand loading
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-endwise'
 Plug 'tomtom/tcomment_vim'
@@ -40,6 +42,9 @@ Plug 'tpope/vim-rails'
 
 " JS typescript
 Plug 'leafgarland/typescript-vim'
+
+Plug 'mbbill/undotree' " undotree
+
 call plug#end()
 
 
@@ -124,6 +129,8 @@ au BufRead,BufNewFile Podfile set filetype=ruby
 let vim_markdown_preview_github=1
 let vim_markdown_preview_hotkey='<C-m>'
 
-
-
+" set undo
+set undofile
+set undodir=~/.vim/undodir
+nnoremap <C-i> :UndotreeToggle<cr>
 
