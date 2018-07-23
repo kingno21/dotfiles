@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 " Utils
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " tree dir
 Plug 'rking/ag.vim' " silver search
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " On-demand loading
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-endwise'
@@ -106,11 +106,6 @@ let g:tmuxline_preset = {
   \'y'    : ['%R', '%a', '%Y'],
   \ }
 
-
-" tabstop
-set tabstop=2
-set shiftwidth=2
-
 " custom map
 noremap <Space>h  ^
 noremap <Space>l  $
@@ -134,3 +129,6 @@ set undofile
 set undodir=~/.vim/undodir
 nnoremap <C-i> :UndotreeToggle<cr>
 
+set tabstop=2
+set expandtab
+set shiftwidth=2
