@@ -156,7 +156,7 @@ let g:airline_theme = 'material'
 set background=dark
 colorscheme material
 
-let mapleader = ","
+let mapleader = " "
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
