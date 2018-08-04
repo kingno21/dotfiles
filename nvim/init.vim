@@ -47,6 +47,7 @@ Plug 'mbbill/undotree' " undotree
 Plug 'kaicataldo/material.vim' " metarial theme
 Plug 'junegunn/vim-easy-align' " easy align
 Plug 'palantir/tslint' " tslint
+Plug 'mxw/vim-jsx' " jsx
 call plug#end()
 
 
@@ -155,3 +156,9 @@ let g:airline_theme = 'material'
 set background=dark
 colorscheme material
 
+let mapleader = ","
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
