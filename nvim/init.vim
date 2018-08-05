@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 " Utils
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " tree dir
 Plug 'rking/ag.vim' " silver search
-" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " On-demand loading
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-endwise'
@@ -18,31 +17,21 @@ Plug 'vim-scripts/AnsiEsc.vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'flazz/vim-colorschemes'
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'Chiel92/vim-autoformat'
-Plug 'rhysd/nyaovim-markdown-preview'
-Plug 'rhysd/nyaovim-popup-tooltip'
 Plug 'slim-template/vim-slim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'danro/rename.vim'
 Plug 'othree/xml.vim'
-Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'
 
-" git
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter' " git
 Plug 'tpope/vim-fugitive' " git wrapper
-
-" rails
-Plug 'tpope/vim-rails'
-
-" JS typescript
-Plug 'leafgarland/typescript-vim'
-
+Plug 'tpope/vim-rails' " rails
+Plug 'leafgarland/typescript-vim' " JS typescript
 Plug 'mbbill/undotree' " undotree
 Plug 'kaicataldo/material.vim' " metarial theme
 Plug 'junegunn/vim-easy-align' " easy align
@@ -53,7 +42,11 @@ Plug 'othree/yajs.vim' " react js
 Plug 'othree/es.next.syntax.vim' " es syntax js
 Plug 'othree/html5.vim' " html5 syntax
 Plug 'maxmellon/vim-jsx-pretty' " vim jsx syntax
-Plug 'yggdroot/indentline' " file indentline
+Plug 'scrooloose/syntastic' " syntax check for all lang
+Plug 'majutsushi/tagbar' " tagbars
+Plug 'w0rp/ale' " linting for lang
+Plug 'elzr/vim-json' " json syntax
+Plug 'xuyuanp/nerdtree-git-plugin' " addons
 call plug#end()
 
 
@@ -73,10 +66,13 @@ let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -109,11 +105,11 @@ let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_powerline_separators = 0
 
 let g:tmuxline_preset = {
-  \'a'    : '#S',
-  \'win'  : ['#I', '#W'],
-  \'cwin' : ['#I', '#W', '#F'],
-  \'y'    : ['%R', '%a', '%Y'],
-  \ }
+      \'a'    : '#S',
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'y'    : ['%R', '%a', '%Y'],
+      \ }
 
 " custom map
 noremap <Space>h  ^
@@ -173,3 +169,16 @@ nnoremap <C-H> <C-W><C-H>
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
+
+" python host
+let g:python_host_prog = '/usr/local/bin/python'
+
+" indent guide
+let g:indent_guides_enable_on_vim_startup = 1
+
+" addons
+let g:NERDTreeShowIgnoredStatus = 1
+
+
+
+
