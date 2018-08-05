@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 " Utils
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " tree dir
 Plug 'rking/ag.vim' " silver search
-" On-demand loading
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-endwise'
 Plug 'tomtom/tcomment_vim'
@@ -28,6 +27,7 @@ Plug 'othree/xml.vim'
 Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'
 
+Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter' " git
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'tpope/vim-rails' " rails
@@ -60,19 +60,6 @@ imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 """"""""""""""""""""""""""""""
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -175,6 +162,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 " addons
 let g:NERDTreeShowIgnoredStatus = 1
 
-
-
-
+" select multiline
+let g:multi_cursor_start_word_key      = '<C-m>'
+let g:multi_cursor_next_key            = '<C-m>'
