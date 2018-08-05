@@ -125,10 +125,6 @@ set encoding=utf-8
 " Config syntax
 au BufRead,BufNewFile Podfile set filetype=ruby
 
-" MD Preview
-let vim_markdown_preview_github=1
-let vim_markdown_preview_hotkey='<C-m>'
-
 " set undo
 set undofile
 set undodir=~/.vim/undodir
