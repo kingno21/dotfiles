@@ -48,6 +48,12 @@ Plug 'kaicataldo/material.vim' " metarial theme
 Plug 'junegunn/vim-easy-align' " easy align
 Plug 'palantir/tslint' " tslint
 Plug 'mxw/vim-jsx' " jsx
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] } " javascript
+Plug 'othree/yajs.vim' " react js
+Plug 'othree/es.next.syntax.vim' " es syntax js
+Plug 'othree/html5.vim' " html5 syntax
+Plug 'maxmellon/vim-jsx-pretty' " vim jsx syntax
+Plug 'yggdroot/indentline' " file indentline
 call plug#end()
 
 
@@ -154,7 +160,7 @@ let g:maierial_theme_style = 'dark'
 let g:airline_theme = 'material'
 
 set background=dark
-colorscheme material
+colorscheme hybrid_material
 
 let mapleader = " "
 
@@ -162,3 +168,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" vim javascripe
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
