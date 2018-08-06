@@ -47,6 +47,7 @@ Plug 'majutsushi/tagbar' " tagbars
 Plug 'w0rp/ale' " linting for lang
 Plug 'elzr/vim-json' " json syntax
 Plug 'xuyuanp/nerdtree-git-plugin' " addons
+Plug 'isruslan/vim-es6' " es6 highlight
 call plug#end()
 
 
@@ -143,6 +144,7 @@ colorscheme hybrid_material
 
 let mapleader = " "
 
+" quick window move
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
