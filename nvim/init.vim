@@ -12,6 +12,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-endwise'
 Plug 'tomtom/tcomment_vim'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'yggdroot/indentline'
 Plug 'vim-scripts/AnsiEsc.vim'
 
 Plug 'vim-airline/vim-airline'
@@ -159,7 +160,9 @@ let g:javascript_plugin_flow = 1
 let g:python_host_prog = '/usr/local/bin/python'
 
 " indent guide
-let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_enable_on_vim_startup = 1
+" indentline
+let g:indentLine_enabled = 1
 
 " addons
 let g:NERDTreeShowIgnoredStatus = 1
@@ -167,3 +170,6 @@ let g:NERDTreeShowIgnoredStatus = 1
 " select multiline
 let g:multi_cursor_start_word_key      = '<C-m>'
 let g:multi_cursor_next_key            = '<C-m>'
+
+" mac clipboard
+set clipboard=unnamed
