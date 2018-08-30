@@ -28,6 +28,7 @@ Plug 'othree/xml.vim'
 Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'
 
+Plug 'simeji/winresizer' " window resize
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter' " git
 Plug 'tpope/vim-fugitive' " git wrapper
@@ -49,12 +50,16 @@ Plug 'w0rp/ale' " linting for lang
 Plug 'elzr/vim-json' " json syntax
 Plug 'xuyuanp/nerdtree-git-plugin' " addons
 Plug 'isruslan/vim-es6' " es6 highlight
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'drewtempelmeyer/palenight.vim',
 call plug#end()
 
 
 " nerd tree
 map <C-n> :NERDTreeToggle<CR>
-autocmd BufEnter * lcd %:p:h
+" autocmd BufEnter * lcd %:p:h
 
 " Auto insert
 """"""""""""""""""""""""""""""
@@ -65,17 +70,15 @@ imap ( ()<LEFT>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_powerline_fonts = 1
 
 " add branch
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set statusline+=%{fugitive#statusline()}
 
 hi Pmenu ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#64666d gui=NONE
-
-" airline theme
-let g:airline_theme='bubblegum'
 
 " markdown
 let g:markdown_preview_auto=1
@@ -141,7 +144,8 @@ let g:maierial_theme_style = 'dark'
 let g:airline_theme = 'material'
 
 set background=dark
-colorscheme hybrid_material
+colorscheme palenight
+let g:palenight_terminal_italics=1
 
 let mapleader = " "
 
@@ -173,3 +177,18 @@ let g:multi_cursor_next_key            = '<C-m>'
 
 " mac clipboard
 set clipboard=unnamed
+
+" ctrip
+"" ingore node_module
+set wildignore+=*/node_modules/*
+
+
+
+
+
+
+
+
+
+
+
