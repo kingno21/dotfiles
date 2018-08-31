@@ -54,8 +54,11 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 Plug 'drewtempelmeyer/palenight.vim',
+Plug 'Valloric/YouCompleteMe',
+Plug 'mhinz/vim-startify',
+Plug 'mhinz/vim-signify',
 call plug#end()
-
+let g:Illuminate_delay = 250
 
 " nerd tree
 map <C-n> :NERDTreeToggle<CR>
@@ -67,6 +70,9 @@ imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 """"""""""""""""""""""""""""""
+
+" Startup tags
+autocmd VimEnter * nested :TagbarOpen
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -161,7 +167,7 @@ let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
 " python host
-let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " indent guide
 " let g:indent_guides_enable_on_vim_startup = 1
@@ -181,8 +187,11 @@ set clipboard=unnamed
 " ctrip
 "" ingore node_module
 set wildignore+=*/node_modules/*
+source ~/.config/nvim/local.vim
 
-
+set foldmethod=indent
+set foldlevel=2
+set foldcolumn=3
 
 
 
