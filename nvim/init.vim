@@ -184,13 +184,19 @@ let g:multi_cursor_next_key            = '<C-m>'
 " mac clipboard
 set clipboard=unnamed
 
+" ag search from root
+let g:ag_working_path_mode="r"
+
 " ctrip
 "" ingore node_module
 set wildignore+=*/node_modules/*
 source ~/.config/nvim/local.vim
 
+" syntastic
+let g:syntastic_yaml_checkers = ['yamllint']
+
 set foldmethod=indent
-set foldlevel=2
+set foldlevel=1
 set foldcolumn=3
 
 
