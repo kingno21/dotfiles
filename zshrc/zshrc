@@ -1,0 +1,47 @@
+#
+# Executes commands at the start of an interactive session.  
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+alias vi='nvim'
+alias l='ls -al'
+alias doc='docker-compose'
+
+export ZSHRC=$HOME/.zshrc
+export VIMRC=$HOME/.config/nvim/init.vim
+export EDITOR=vi
+
+# python setup
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  export WORKON_HOME=$HOME/.virtualenvs
+  export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+  export VIRTUALENVWRAPPER_VITRUALENV=/usr/local/bin/virtualenv
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# zplug manager
+export ZPLUG_HOME=~/.config/.zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-autosuggestions"
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
+
+# load local setup
+source $HOME/.config/shell/.localrc
