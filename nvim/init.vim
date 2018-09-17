@@ -73,6 +73,7 @@ imap ( ()<LEFT>
 
 " Startup tags
 autocmd VimEnter * nested :TagbarOpen
+let g:tagbar_width=25
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -189,10 +190,12 @@ set clipboard=unnamed
 set wildignore+=*/node_modules/*
 source ~/.config/nvim/local.vim
 
-set foldmethod=indent
 set foldlevel=2
 set foldcolumn=3
 
+" prettier auto format
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 
 
