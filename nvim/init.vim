@@ -11,8 +11,7 @@ Plug 'rking/ag.vim' " silver search
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-endwise'
 Plug 'tomtom/tcomment_vim'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'yggdroot/indentline'
+Plug 'nathanaelkane/vim-indent-guides' Plug 'yggdroot/indentline'
 Plug 'vim-scripts/AnsiEsc.vim'
 
 Plug 'vim-airline/vim-airline'
@@ -57,6 +56,8 @@ Plug 'drewtempelmeyer/palenight.vim',
 Plug 'Valloric/YouCompleteMe',
 Plug 'mhinz/vim-startify',
 Plug 'mhinz/vim-signify',
+Plug 'fatih/vim-go',
+Plug 'stephpy/vim-yaml',
 call plug#end()
 let g:Illuminate_delay = 250
 
@@ -90,8 +91,6 @@ hi Pmenu ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#64666d gui=NONE
 " markdown
 let g:markdown_preview_auto=1
 
-" clipboard
-set clipboard+=unnamedplus
 
 " fix size
 let NERDTreeWinSize=20
@@ -184,12 +183,20 @@ let g:multi_cursor_next_key            = '<C-m>'
 
 " mac clipboard
 set clipboard=unnamed
+" set clipboard+=unnamedplus
+
+" ag search from root
+let g:ag_working_path_mode="r"
 
 " ctrip
 "" ingore node_module
 set wildignore+=*/node_modules/*
 source ~/.config/nvim/local.vim
 
+" fold
+" set foldmethod=indent
+" set foldlevel=1
+" set foldcolumn=3
 set foldlevel=2
 set foldcolumn=3
 
@@ -197,6 +204,12 @@ set foldcolumn=3
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
+" syntastic
+let g:syntastic_yaml_checkers = ['yamllint']
+
+augroup GolangSettings
+  au FileType go nmap <leader>gd <Plug>(go-def-vertical)
+augroup END
 
 
 
