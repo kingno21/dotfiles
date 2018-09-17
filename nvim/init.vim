@@ -11,7 +11,8 @@ Plug 'rking/ag.vim' " silver search
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-endwise'
 Plug 'tomtom/tcomment_vim'
-Plug 'nathanaelkane/vim-indent-guides' Plug 'yggdroot/indentline'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'yggdroot/indentline'
 Plug 'vim-scripts/AnsiEsc.vim'
 
 Plug 'vim-airline/vim-airline'
