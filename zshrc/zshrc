@@ -15,7 +15,11 @@ alias doc='docker-compose'
 
 export ZSHRC=$HOME/.zshrc
 export VIMRC=$HOME/.config/nvim/init.vim
+
+# env
 export EDITOR=vi
+export VISUAL=vi
+
 
 # python setup
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
