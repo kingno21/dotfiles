@@ -117,6 +117,10 @@ nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 
+" tagbar shortcut
+nnoremap <Space>; :TagbarOpen -j<cr>
+nnoremap <C-i> :TagbarToggle<cr>
+
 " xml edit
 let g:xml_namespace_transparent=1
 set encoding=utf-8
@@ -127,12 +131,7 @@ au BufRead,BufNewFile Podfile set filetype=ruby
 " set undo
 set undofile
 set undodir=~/.vim/undodir
-nnoremap <C-i> :UndotreeToggle<cr>
 
-set tabstop=2
-set expandtab
-set shiftwidth=2
-set list
 
 " vim theme material
 if (has("nvim"))
@@ -162,6 +161,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
 " vim javascripe
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
@@ -183,8 +183,8 @@ let g:multi_cursor_start_word_key      = '<C-m>'
 let g:multi_cursor_next_key            = '<C-m>'
 
 " mac clipboard
-set clipboard=unnamed
-" set clipboard+=unnamedplus
+" set clipboard=unnamed
+set clipboard+=unnamedplus
 
 " ag search from root
 let g:ag_working_path_mode="r"
