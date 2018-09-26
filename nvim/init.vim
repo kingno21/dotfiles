@@ -65,6 +65,9 @@ let g:Illuminate_delay = 250
 " nerd tree
 map <C-n> :NERDTreeToggle<CR>
 " autocmd BufEnter * lcd %:p:h
+"
+" fix size
+let NERDTreeWinSize=20
 
 " Auto insert
 """"""""""""""""""""""""""""""
@@ -91,12 +94,7 @@ hi Pmenu ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#64666d gui=NONE
 " markdown
 let g:markdown_preview_auto=1
 
-
-" fix size
-let NERDTreeWinSize=20
-
 set switchbuf+=usetab,newtab
-
 
 " tmux + vim
 let g:airline#extensions#tmuxline#enabled = 0
@@ -119,6 +117,7 @@ nnoremap Q <Nop>
 " tagbar shortcut
 nnoremap <Space>; :TagbarOpen -j<cr>
 nnoremap <C-i> :TagbarToggle<cr>
+nnoremap <Space>i :UndotreeToggle<cr>
 
 " xml edit
 let g:xml_namespace_transparent=1
