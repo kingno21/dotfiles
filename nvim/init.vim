@@ -42,6 +42,7 @@ Plug 'mxw/vim-jsx' " jsx
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] } " javascript
 Plug 'othree/yajs.vim' " react js
 Plug 'othree/es.next.syntax.vim' " es syntax js
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/html5.vim' " html5 syntax
 Plug 'maxmellon/vim-jsx-pretty' " vim jsx syntax
 Plug 'scrooloose/syntastic' " syntax check for all lang
@@ -59,6 +60,7 @@ Plug 'mhinz/vim-startify',
 Plug 'mhinz/vim-signify',
 Plug 'fatih/vim-go',
 Plug 'stephpy/vim-yaml',
+Plug 'ap/vim-css-color'
 call plug#end()
 let g:Illuminate_delay = 250
 
