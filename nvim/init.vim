@@ -59,6 +59,11 @@ Plug 'mhinz/vim-startify',
 Plug 'mhinz/vim-signify',
 Plug 'fatih/vim-go',
 Plug 'stephpy/vim-yaml',
+
+" auto complete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 call plug#end()
 let g:Illuminate_delay = 250
 
@@ -116,7 +121,6 @@ nnoremap Q <Nop>
 
 " tagbar shortcut
 nnoremap <Space>; :TagbarOpen -j<cr>
-nnoremap <C-i> :TagbarToggle<cr>
 nnoremap <Space>i :UndotreeToggle<cr>
 
 " xml edit
@@ -203,6 +207,17 @@ let g:syntastic_yaml_checkers = ['yamllint']
 augroup GolangSettings
   au FileType go nmap <leader>gd <Plug>(go-def-vertical)
 augroup END
+
+
+" copy
+vnoremap y y'>
+
+" open buffer
+nnoremap <C-i> :CtrlPBuffer<cr>
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
 
 
 
