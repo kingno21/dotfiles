@@ -121,6 +121,7 @@ nnoremap Q <Nop>
 
 " tagbar shortcut
 nnoremap <Space>; :TagbarOpen -j<cr>
+nnoremap <C-q> :TagbarToggle<cr>
 nnoremap <Space>i :UndotreeToggle<cr>
 
 " xml edit
