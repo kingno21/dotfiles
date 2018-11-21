@@ -49,3 +49,5 @@ zplug load
 
 # load local setup
 source $HOME/.config/shell/.localrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
