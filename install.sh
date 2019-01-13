@@ -16,4 +16,7 @@ done
 # mkdir -p ~/.config/nvim
 # ln -snfv ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 
+# localrc
+mkdir -p $HOME/.config/shell
+touch $HOME/.config/shell/.localrc
 echo "finish setup"

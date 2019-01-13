@@ -66,6 +66,8 @@ Plug 'ap/vim-css-color'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'posva/vim-vue'
+
 call plug#end()
 let g:Illuminate_delay = 250
 
@@ -218,6 +220,18 @@ augroup GolangSettings
   au FileType go nmap <leader>gd <Plug>(go-def-vertical)
 augroup END
 
+" copy
+vnoremap y y'>
+
+" open buffer
+nnoremap <C-i> :CtrlPBuffer<cr>
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 " copy
 vnoremap y y'>
