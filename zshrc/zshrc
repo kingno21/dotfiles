@@ -9,7 +9,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-alias vi='nvim'
 alias l='ls -al'
 alias doc='docker-compose'
 
@@ -49,7 +48,7 @@ fi
 zplug load
 
 # load local setup
-source $HOME/.config/shell/.localrc
+source $HOME/.config/shell/.localrc.zsh
 
 export LANG="en_US.UTF-8"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

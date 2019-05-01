@@ -67,6 +67,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'posva/vim-vue'
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 let g:Illuminate_delay = 250
