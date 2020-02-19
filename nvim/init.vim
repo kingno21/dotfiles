@@ -61,6 +61,8 @@ Plug 'mhinz/vim-signify',
 Plug 'fatih/vim-go',
 Plug 'stephpy/vim-yaml',
 Plug 'ap/vim-css-color'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " auto complete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -68,6 +70,8 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'posva/vim-vue'
 Plug 'jparise/vim-graphql'
+Plug 'elmcast/elm-vim'
+Plug 'avh4/elm-format'
 
 call plug#end()
 let g:Illuminate_delay = 250
