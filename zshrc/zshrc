@@ -16,17 +16,8 @@ export ZSHRC=$HOME/.zshrc
 export VIMRC=$HOME/.config/nvim/init.vim
 
 # env
-export EDITOR=vi
+export EDITOR=nvim
 export VISUAL=vi
-
-
-# python setup
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-  export WORKON_HOME=$HOME/.virtualenvs
-  export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-  export VIRTUALENVWRAPPER_VITRUALENV=/usr/local/bin/virtualenv
-  source /usr/local/bin/virtualenvwrapper.sh
-fi
 
 # zplug manager
 export ZPLUG_HOME=~/.config/.zplug
@@ -56,3 +47,4 @@ export LANG="en_US.UTF-8"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/gettext/lib"
 export CPPFLAGS="-I/usr/local/opt/gettext/include"
+

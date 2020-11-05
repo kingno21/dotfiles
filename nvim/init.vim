@@ -181,7 +181,6 @@ let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
 " python host
-let g:python3_host_prog = '/usr/local/bin/python3'
 
 " indent guide
 " let g:indent_guides_enable_on_vim_startup = 1
